@@ -1,5 +1,5 @@
-RED="\e[1;31m"
-GREEN="\e[1;32m"
+RED="\e[31m"
+GREEN="\e[32m"
 ENDCOLOR="\e[0m"
 
 clear
@@ -14,8 +14,6 @@ fi
 wget -q https://github.com/TekenCPS/TekenProxy/raw/main/proxy_linux
 sleep 1
 echo -e "${GREEN}Proxy Installed${ENDCOLOR}"
-sleep 1
-echo -e "${GREEN}Executing Proxy...${ENDCOLOR}"
-sleep 5
+echo -e "${GREEN}Execute proxy with this command: ./proxy_linux${ENDCOLOR}"
 chmod +x proxy_linux
-./proxy_linux
+rm -r -f install.sh
