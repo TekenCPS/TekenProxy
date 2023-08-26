@@ -1,21 +1,20 @@
-RED="\e[1;31m"
-GREEN="\e[1;32m"
+PURPLE="\e[1;35m"
 ENDCOLOR="\e[0m"
 
 clear
-echo -e "${GREEN}Installing Proxy...${ENDCOLOR}"
+echo -e "${PURPLE}Installing Proxy...${ENDCOLOR}"
 sleep 1
-if [ -f "proxy_linux" ]; then
-    echo -e "${RED}Deleting old proxy...${ENDCOLOR}"
-    rm proxy_linux
+if [ -f "proxy" ]; then
+    echo -e "${PURPLE}Deleting old proxy...${ENDCOLOR}"
+    rm proxy
     sleep 1
-    echo -e "${GREEN}Updating proxy...${ENDCOLOR}"
+    echo -e "${PURPLE}Updating proxy...${ENDCOLOR}"
 fi
-wget -q https://github.com/TekenCPS/TekenProxy/raw/main/proxy_linux
+wget -q https://github.com/TekenCPS/TekenProxy/raw/main/proxy
 sleep 1
-echo -e "${GREEN}Proxy Installed${ENDCOLOR}"
+echo -e "${PURPLE}Proxy Installed${ENDCOLOR}"
 sleep 1
-echo -e "${GREEN}Executing Proxy...${ENDCOLOR}"
+echo -e "${PURPLE}Executing Proxy...${ENDCOLOR}"
 sleep 5
-chmod +x proxy_linux
-./proxy_linux
+chmod +x proxy
+./proxy
